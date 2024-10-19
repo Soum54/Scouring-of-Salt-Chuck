@@ -5,7 +5,6 @@ The accumulation of plastic trash in ponds adversely affects aquatic ecosystems 
 - Harming living organisms.
 - Increasing disease transmission among organisms.
 - Degrading overall water quality through the release of harmful chemicals from microplastics.
-![esp32](https://github.com/user-attachments/assets/178fe3e8-b083-4e4b-ac9b-f61bc21e26e3)
 
 ## Abstract
 - Ponds grapple with diverse challenges as plastic trash accumulation harms aquatic ecosystems and endangers a variety of species. The urgency to address these issues is underscored by the importance of ponds as vital habitats. Detrimental effects of plastic trash on water quality, aquatic life, and biodiversity necessitate prompt removal. Utilizing advanced technologies such as Satellite signals, IoT sensors, and AI & ML with deep learning algorithms can expedite trash detection and removal processes. Swift intervention is critical to restoring pond ecosystems, safeguarding biodiversity, and ensuring sustainable water resources.
