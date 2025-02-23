@@ -5,6 +5,7 @@ import tensorflow as tf
 import cv2  # OpenCV for image processing
 from PIL import Image
 import matplotlib.pyplot as plt
+import os
 
 # Load the trained model
 model = tf.keras.models.load_model('plastic_model.h5')  # Update the path as needed
@@ -36,7 +37,7 @@ def detect_edges(img_path):
     edges = cv2.Canny(img_gray, 100, 200)  # Apply Canny edge detection
 
     # Save the edge-detected image
-    edge_img_path = img_path.replace('.jpeg', '_edges.jpeg')  # Create a new filename
+    edge_img_path = img_path.replace('.jpeg', '_edges.jpeg').replace('.jpg', '_edges.jpg').replace('.png', '_edges.png')  # Create a new filename
     cv2.imwrite(edge_img_path, edges)
 
     return edge_img_path
@@ -72,3 +73,5 @@ if uploaded_file is not None:
         edge_img = Image.open(edge_img_path)
         st.image(edge_img, caption="Edge Detection Result", use_column_width=True)
 
+        # Clean up: delete the edge image after display (optional)
+        os.remove(edge_img_path)
