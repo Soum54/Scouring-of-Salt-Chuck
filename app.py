@@ -15,8 +15,15 @@ def predict_image(img):
     # Preprocess the image
     img = img.resize((150, 150))  # Ensure it matches the model's input size
     img_array = np.array(img)
-    img_array = np.expand_dims(img_array, axis=0)  # Add a batch dimension
-    img_array /= 255.0  # Normalize the image
+    
+    # Convert to float32 for proper normalization
+    img_array = img_array.astype('float32')  # Convert the image array to float32
+    
+    # Normalize the image
+    img_array /= 255.0  # Scale pixel values between 0 and 1
+
+    # Add a batch dimension
+    img_array = np.expand_dims(img_array, axis=0)  # Add batch dimension
 
     # Predict using the model
     prediction = model.predict(img_array)
